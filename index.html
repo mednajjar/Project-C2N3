@@ -1,37 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
 
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- displays site properly based on user's device -->
 
-    <title>Project tracking intro component</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
-  </head>
-  <body>
-    Product Features Pricing Login New Monograph Dashboard Powerful insights
-    into your team Project planning and time tracking for agile teams Schedule a
-    demo to see a live preview
+  <title>Project tracking intro component</title>
 
-    <footer>
-      <p class="attribution">Coded by <a href="#">Your Name Here</a>.</p>
-    </footer>
-  </body>
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <!-----------------------------------logo & menu--------------------------------------->
+    <ul>
+      <img src="./images/logo.svg" alt="logo" class="logo">
+      <div class="menu">
+        <li><a href="#">PRODUCT</a></li>
+        <li><a href="#">FEATURES</a></li>
+        <li><a href="#">PRICING</a></li>
+        <li class="cercle__spacing">
+          <div id="cercle"></div>
+        </li>
+        <li class="login"><a href="#">LOGIN</a></li>
+      </div>
+    </ul>
+    <!----------------------------------------End menu------------------------------------->
+    <!-----------------------------------text content-------------------------------------->
+    <div class="content">
+      <div class="content__title1">
+        <div class="back">
+          <h6 class="content__TL1">NEW</h6>
+        </div>
+        <h6 class="content__TL2">MONOGRAPH DASHBOARD</h6>
+      </div>
+      <div class="content__title2">
+        <h1 class="content__title2--h1"></h1>POWERFUL INSIGHTS IN TO YOUR TEAM</h1>
+        <p class="content__title2--para">Project planning and time tracking for agile teams</p>
+      </div>
+      <div class="content__b&t">
+        <button class="content__btn">SCHEDULE A DEMO</button>
+        <p class="content__para2">TO SEE A PREVIEW</p>
+      </div>
+      <!---------------------------------end text content---------------------------------->
+      <!------------------------------------image header----------------------------------->
+      <div class="content__img">
+        <img src="./images/illustration-devices.svg" alt="left-img" class="leftImg"></div>
+    </div>
+    <!---------------------------------------end image------------------------------------->
+
+  </header>
+
+  <footer>
+    <p class="attribution">Coded by <a href="#">Mohammed Najjar</a>.</p>
+  </footer>
+</body>
+
 </html>
