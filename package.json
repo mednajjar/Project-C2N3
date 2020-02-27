@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "compile": "node-sass sass/main.scss css/style.css",
-    "watch": "node-sass sass/main.scss css/style.cs -w",
+    "watch": "node-sass sass/main.scss css/style.css -w",
     "compressed": "node-sass sass/main.scss css/style.css -w --output-style=compressed"
   },
   "repository": {
