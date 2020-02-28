@@ -3,25 +3,22 @@
   padding: 0; }
 
 body {
-  width: 375px;
-  font-size: 18px;
+  width: 100%;
+  font-size: 1.125rem;
   font-family: "Barlow";
   box-sizing: border-box; }
-
-.dropdown {
-  width: 100%;
-  font-family: "Barlow Condensed"; }
 
 input[type=checkbox] {
   display: none; }
 
 .logo {
-  margin: 20px; }
+  width: 6%;
+  margin: 5%; }
 
 .burger,
 .close {
   float: right;
-  margin: 20px; }
+  margin: 5%; }
 
 .close {
   visibility: hidden;
@@ -29,10 +26,9 @@ input[type=checkbox] {
 
 .dropdown {
   position: absolute;
-  z-index: 1;
+  z-index: 1111;
   width: 100%;
-  margin-top: 14px;
-  margin-left: 8px; }
+  margin: 7% auto; }
 
 ul {
   display: none;
@@ -41,14 +37,15 @@ ul {
   list-style: none;
   letter-spacing: 2px;
   width: 90%;
-  height: 30vh;
+  height: 29vh;
   margin: auto;
-  margin-top: 5%;
+  margin-top: 3%;
   background: white;
   padding-top: 6%;
   box-shadow: 0px 3px 16px -3px rgba(0, 0, 0, 0.75); }
   ul li {
-    padding: 9px 0; }
+    padding: 9px 0;
+    align-content: center; }
     ul li a {
       text-decoration: none;
       color: black;
@@ -66,26 +63,29 @@ input[type=checkbox]:checked ~ .close {
   visibility: visible; }
 
 .contentImg {
-  position: relative;
+  position: absolute;
   width: 50%;
-  height: 68vh;
+  height: 60vh;
   top: 0;
-  right: -20px;
-  float: right;
+  right: 0;
   background: #eef3f6;
-  z-index: -1;
+  z-index: -1111;
   border-radius: 0px 0px 0px 60px; }
 
-.bloc {
+.container {
   position: absolute;
-  top: 18%;
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  z-index: 1; }
+
+.bloc {
   width: 100%;
   z-index: -1;
-  overflow: hidden;
   padding-left: 20px;
-  font-weight: 400; }
+  overflow: hidden;
+  margin-top: 35%; }
   .bloc__Img {
-    margin-top: 6%;
     width: 135%; }
 
 .line-cer {
@@ -98,10 +98,10 @@ input[type=checkbox]:checked ~ .close {
   color: #5b5f71; }
 
 .content {
-  position: absolute;
+  font-family: "Barlow";
   width: 100%;
-  top: 70%;
-  padding-left: 20px; }
+  align-content: center;
+  margin: 20% 0 0 5%; }
 
 .blocTitle {
   display: inline-flex;
@@ -112,7 +112,8 @@ input[type=checkbox]:checked ~ .close {
     background: black;
     color: white;
     padding: 2%;
-    border-radius: 20px; }
+    border-radius: 20px;
+    align-content: center; }
   .blocTitle__title1 {
     padding: 2%;
     padding-left: 6%;
@@ -123,7 +124,7 @@ input[type=checkbox]:checked ~ .close {
   margin-bottom: 8%; }
   .blocTitle2__para1 {
     font-size: 1.8rem;
-    font-weight: 900; }
+    font-weight: 700; }
   .blocTitle2__para2 {
     margin-top: 3%;
     font-weight: 500;
