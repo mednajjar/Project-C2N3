@@ -1,0 +1,25 @@
+{
+  "name": "firstnpm-sass",
+  "version": "1.0.0",
+  "description": "Le projet permet d'améliorer vos compétences dans un environnement de travail réel.",
+  "main": "index.js",
+  "scripts": {
+    "compile": "node-sass sass/main.scss css/style.css",
+    "watch": "node-sass sass/main.scss css/style.css -w",
+    "compressed": "node-sass sass/main.scss css/style.css -w --output-style=compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mednajjar/Project-C2N3.git"
+  },
+  "keywords": [],
+  "author": "MOHAMMED NAJJAR",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mednajjar/Project-C2N3/issues"
+  },
+  "homepage": "https://github.com/mednajjar/Project-C2N3#readme",
+  "devDependencies": {
+    "node-sass": "^4.13.1"
+  }
+}

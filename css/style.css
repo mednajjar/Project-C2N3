@@ -1,0 +1,220 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  width: 100%;
+  font-size: 1.125rem;
+  font-family: "Barlow";
+  box-sizing: border-box; }
+
+.menuDesktop {
+  display: none;
+  font-family: "Barlow Condensed";
+  width: 75%;
+  position: absolute;
+  right: 2%;
+  top: 0;
+  height: auto;
+  float: right;
+  justify-content: flex-end;
+  list-style: none; }
+  @media (min-width: 800px) and (max-width: 1440px) {
+    .menuDesktop {
+      display: block;
+      display: inline-flex; } }
+  .menuDesktop il {
+    padding-right: 4%; }
+  .menuDesktop il a {
+    text-decoration: none;
+    font-weight: 700;
+    cursor: pointer; }
+  .menuDesktop il a:hover {
+    text-decoration: underline; }
+  .menuDesktop il .log a {
+    color: #5b5f71; }
+  .menuDesktop .cercle {
+    color: #5b5f71; }
+
+input[type=checkbox] {
+  display: none; }
+
+.logo {
+  margin: 1% 5%; }
+
+.burger,
+.close {
+  float: right;
+  margin: 1% 5%; }
+  @media (min-width: 800px) and (max-width: 1440px) {
+    .burger,
+    .close {
+      display: none; } }
+
+.close {
+  visibility: hidden;
+  margin-right: -40px; }
+
+.dropdown {
+  position: absolute;
+  z-index: 1111;
+  width: 100%;
+  margin: 7% auto; }
+
+ul {
+  display: none;
+  z-index: 1111;
+  text-align: center;
+  list-style: none;
+  letter-spacing: 2px;
+  width: 90%;
+  height: 29vh;
+  margin: auto;
+  margin-top: 1%;
+  background: white;
+  box-shadow: 0px 3px 16px -3px rgba(0, 0, 0, 0.75); }
+  @media (min-width: 800px) and (max-width: 1440px) {
+    ul {
+      display: none;
+      background: none;
+      box-shadow: none; } }
+  ul li {
+    padding: 9px 0;
+    align-content: center; }
+    ul li a {
+      text-decoration: none;
+      color: black;
+      font-weight: 700; }
+    ul li a:hover {
+      text-decoration: underline; }
+
+input[type=checkbox]:checked ~ ul {
+  display: block; }
+
+input[type=checkbox]:checked ~ .burger {
+  visibility: hidden; }
+
+input[type=checkbox]:checked ~ .close {
+  visibility: visible; }
+
+.contentImg {
+  position: absolute;
+  width: 50%;
+  height: 60%;
+  top: 0;
+  right: 0;
+  background: #eef3f6;
+  z-index: -1111;
+  border-radius: 0px 0px 0px 60px; }
+  @media (min-width: 800px) and (max-width: 1440px) {
+    .contentImg {
+      height: 72%; } }
+
+.container {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: end; }
+
+.bloc {
+  position: absolute;
+  width: 90vw;
+  z-index: -11;
+  right: 0;
+  padding-left: 20px;
+  overflow: hidden;
+  margin-top: 35%; }
+  @media (min-width: 800px) and (max-width: 1440px) {
+    .bloc {
+      width: 50%;
+      margin-top: 25%; } }
+  .bloc__Img {
+    width: 135%; }
+
+.line-cer {
+  width: 80%;
+  margin: 0 auto;
+  height: 2px;
+  background: #eef3f6; }
+
+.log a {
+  color: #5b5f71; }
+
+.content {
+  font-family: "Barlow";
+  width: 100%;
+  margin-top: 115%;
+  font-size: 1.2rem;
+  padding-left: 5%; }
+  @media (min-width: 800px) and (max-width: 1440px) {
+    .content {
+      width: 100%;
+      font-size: 1em;
+      margin-top: 27%; } }
+
+.blocTitle {
+  display: inline-flex;
+  width: 100%;
+  letter-spacing: 3px; }
+  .blocTitle__back {
+    background: black;
+    color: white;
+    height: 100%;
+    padding: 1%;
+    border-radius: 20px;
+    justify-items: center;
+    margin-top: 1%; }
+  .blocTitle__title1 {
+    padding: 2%;
+    padding-left: 6%;
+    color: #a0a1ac;
+    justify-content: center; }
+    @media (min-width: 800px) and (max-width: 1440px) {
+      .blocTitle__title1 {
+        padding-left: 2%; } }
+
+.blocTitle2 {
+  width: 100%;
+  margin-bottom: 5%; }
+  .blocTitle2__para1 {
+    font-size: 1.8rem;
+    font-weight: 700; }
+    @media (min-width: 800px) and (max-width: 1440px) {
+      .blocTitle2__para1 {
+        font-size: 1.6em; } }
+  .blocTitle2__para2 {
+    margin-top: 3%;
+    font-weight: 500;
+    color: #a0a1ac; }
+
+.blocbtn {
+  width: 100%;
+  display: inline-flex;
+  margin-bottom: 10%; }
+  .blocbtn button {
+    background: #ff5c5c;
+    border: none;
+    width: 40%;
+    padding: 0 3%;
+    border-radius: 6px;
+    color: white;
+    font-size: .7rem; }
+    @media (min-width: 800px) and (max-width: 1440px) {
+      .blocbtn button {
+        width: 25%;
+        font-size: .6em;
+        font-weight: 400; } }
+  .blocbtn h6 {
+    color: #a0a1ac;
+    letter-spacing: 2px;
+    margin-left: 3%;
+    padding: 2%; }
+    @media (min-width: 800px) and (max-width: 1440px) {
+      .blocbtn h6 {
+        margin-left: 1%;
+        letter-spacing: 3px;
+        margin-left: 1%; } }
+
+footer {
+  margin-bottom: 10%; }
