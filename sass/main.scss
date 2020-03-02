@@ -3,9 +3,22 @@
     padding: 0;
 }
 
+@mixin mobile {
+    @media (min-width: 800px) and (max-width:1440px) {
+        @content;
+    }
+}
 
 @import "./variables";
 @import "./mixin";
+
+
+
+
+
+
+
+
 
 body {
     width: 100%;
@@ -15,6 +28,60 @@ body {
 
 }
 
+.menuDesktop {
+    display: none;
+    font-family: 'Barlow Condensed', ;
+    width: 75%;
+    position: absolute;
+    right: 2%;
+    top: 0;
+
+    height: auto;
+    float: right;
+    justify-content: flex-end;
+    list-style: none;
+
+
+    @include mobile() {
+
+        display: block;
+
+        display: inline-flex;
+
+
+
+    }
+
+
+
+    & il {
+        padding-right: 4%;
+    }
+
+    & il a {
+        text-decoration: none;
+        font-weight: 700;
+        cursor: pointer;
+
+    }
+
+    & il a:hover {
+        text-decoration: underline;
+    }
+
+    & il .log a {
+        color: $DarkGrayishBlue;
+
+    }
+
+    & .cercle {
+        color: $DarkGrayishBlue;
+
+    }
+
+}
+
+
 
 input[type=checkbox] {
     display: none;
@@ -22,19 +89,25 @@ input[type=checkbox] {
 }
 
 .logo {
-    width: 6%;
-    margin: 5%;
+
+    margin: 1% 5%;
 }
 
 .burger,
 .close {
     float: right;
-    margin: 5%;
+    margin: 1% 5%;
+
+    @include mobile() {
+        display: none;
+    }
 }
 
 .close {
     visibility: hidden;
     margin-right: -40px;
+
+
 }
 
 .dropdown {
@@ -57,10 +130,17 @@ ul {
     width: 90%;
     height: 29vh;
     margin: auto;
-    margin-top: 3%;
+    margin-top: 1%;
     background: $white;
-    padding-top: 6%;
+
     box-shadow: 0px 3px 16px -3px rgba(0, 0, 0, 0.75);
+
+    @include mobile() {
+        display: none;
+        background: none;
+        box-shadow: none;
+
+    }
 
     & li {
         padding: 9px 0;
@@ -94,31 +174,58 @@ input[type=checkbox]:checked~.close {
 .contentImg {
     position: absolute;
     width: 50%;
-    height: 60vh;
+    height: 60%;
     top: 0;
     right: 0;
     background: $LightGrayishBlue;
     z-index: -1111;
     border-radius: 0px 0px 0px 60px;
+
+    @include mobile() {
+        height: 72%;
+    }
+
+
+
+
+
+
 }
 
 .container {
-    position: absolute;
     width: 95%;
     display: flex;
     flex-direction: column;
-    z-index: 1;
+    flex-wrap: wrap;
+    justify-content: end;
+
+
+
+
+
 }
 
 .bloc {
-    width: 100%;
-    z-index: -1;
+
+    position: absolute;
+    width: 90vw;
+    z-index: -11;
+    right: 0;
     padding-left: 20px;
     overflow: hidden;
     margin-top: 35%;
 
+    @include mobile() {
+        width: 50%;
+        margin-top: 25%;
+    }
+
+
+
+
     &__Img {
         width: 135%;
+
 
     }
 }
@@ -132,14 +239,33 @@ input[type=checkbox]:checked~.close {
 
 .log a {
     color: $DarkGrayishBlue;
+
+
+
+
+
 }
 
 .content {
-
     font-family: 'Barlow', ;
     width: 100%;
-    align-content: center;
-    margin: 20% 0 0 5%;
+    margin-top: 115%;
+    font-size: 1.2rem;
+    padding-left: 5%;
+
+
+    @include mobile() {
+        width: 100%;
+        font-size: 1em;
+        margin-top: 27%;
+
+
+
+    }
+
+
+
+
 
 }
 
@@ -147,30 +273,48 @@ input[type=checkbox]:checked~.close {
     display: inline-flex;
     width: 100%;
     letter-spacing: 3px;
-    margin-bottom: 3%;
+
 
     &__back {
         background: black;
         color: $white;
-        padding: 2%;
+        height: 100%;
+        padding: 1%;
         border-radius: 20px;
-        align-content: center;
+        justify-items: center;
+        margin-top: 1%;
+
+
+
     }
 
     &__title1 {
         padding: 2%;
         padding-left: 6%;
         color: $GrayishBlue;
+        justify-content: center;
+
+        @include mobile() {
+            padding-left: 2%;
+        }
+
+
     }
 }
 
 .blocTitle2 {
     width: 100%;
-    margin-bottom: 8%;
+    margin-bottom: 5%;
 
     &__para1 {
         font-size: 1.8rem;
         font-weight: 700;
+
+        @include mobile() {
+            font-size: 1.6em;
+        }
+
+
     }
 
     &__para2 {
@@ -188,11 +332,19 @@ input[type=checkbox]:checked~.close {
     & button {
         background: $Red;
         border: none;
-        width: 35%;
-        padding: 3% 0;
+        width: 40%;
+        padding: 0 3%;
         border-radius: 6px;
         color: $white;
         font-size: .7rem;
+
+        @include mobile() {
+            width: 25%;
+            font-size: .6em;
+            font-weight: 400;
+        }
+
+
     }
 
     & h6 {
@@ -200,6 +352,12 @@ input[type=checkbox]:checked~.close {
         letter-spacing: 2px;
         margin-left: 3%;
         padding: 2%;
+
+        @include mobile() {
+            margin-left: 1%;
+            letter-spacing: 3px;
+            margin-left: 1%;
+        }
     }
 
 }

@@ -8,17 +8,48 @@ body {
   font-family: "Barlow";
   box-sizing: border-box; }
 
+.menuDesktop {
+  display: none;
+  font-family: "Barlow Condensed";
+  width: 75%;
+  position: absolute;
+  right: 2%;
+  top: 0;
+  height: auto;
+  float: right;
+  justify-content: flex-end;
+  list-style: none; }
+  @media (min-width: 800px) and (max-width: 1440px) {
+    .menuDesktop {
+      display: block;
+      display: inline-flex; } }
+  .menuDesktop il {
+    padding-right: 4%; }
+  .menuDesktop il a {
+    text-decoration: none;
+    font-weight: 700;
+    cursor: pointer; }
+  .menuDesktop il a:hover {
+    text-decoration: underline; }
+  .menuDesktop il .log a {
+    color: #5b5f71; }
+  .menuDesktop .cercle {
+    color: #5b5f71; }
+
 input[type=checkbox] {
   display: none; }
 
 .logo {
-  width: 6%;
-  margin: 5%; }
+  margin: 1% 5%; }
 
 .burger,
 .close {
   float: right;
-  margin: 5%; }
+  margin: 1% 5%; }
+  @media (min-width: 800px) and (max-width: 1440px) {
+    .burger,
+    .close {
+      display: none; } }
 
 .close {
   visibility: hidden;
@@ -39,10 +70,14 @@ ul {
   width: 90%;
   height: 29vh;
   margin: auto;
-  margin-top: 3%;
+  margin-top: 1%;
   background: white;
-  padding-top: 6%;
   box-shadow: 0px 3px 16px -3px rgba(0, 0, 0, 0.75); }
+  @media (min-width: 800px) and (max-width: 1440px) {
+    ul {
+      display: none;
+      background: none;
+      box-shadow: none; } }
   ul li {
     padding: 9px 0;
     align-content: center; }
@@ -65,26 +100,35 @@ input[type=checkbox]:checked ~ .close {
 .contentImg {
   position: absolute;
   width: 50%;
-  height: 60vh;
+  height: 60%;
   top: 0;
   right: 0;
   background: #eef3f6;
   z-index: -1111;
   border-radius: 0px 0px 0px 60px; }
+  @media (min-width: 800px) and (max-width: 1440px) {
+    .contentImg {
+      height: 72%; } }
 
 .container {
-  position: absolute;
   width: 95%;
   display: flex;
   flex-direction: column;
-  z-index: 1; }
+  flex-wrap: wrap;
+  justify-content: end; }
 
 .bloc {
-  width: 100%;
-  z-index: -1;
+  position: absolute;
+  width: 90vw;
+  z-index: -11;
+  right: 0;
   padding-left: 20px;
   overflow: hidden;
   margin-top: 35%; }
+  @media (min-width: 800px) and (max-width: 1440px) {
+    .bloc {
+      width: 50%;
+      margin-top: 25%; } }
   .bloc__Img {
     width: 135%; }
 
@@ -100,31 +144,45 @@ input[type=checkbox]:checked ~ .close {
 .content {
   font-family: "Barlow";
   width: 100%;
-  align-content: center;
-  margin: 20% 0 0 5%; }
+  margin-top: 115%;
+  font-size: 1.2rem;
+  padding-left: 5%; }
+  @media (min-width: 800px) and (max-width: 1440px) {
+    .content {
+      width: 100%;
+      font-size: 1em;
+      margin-top: 27%; } }
 
 .blocTitle {
   display: inline-flex;
   width: 100%;
-  letter-spacing: 3px;
-  margin-bottom: 3%; }
+  letter-spacing: 3px; }
   .blocTitle__back {
     background: black;
     color: white;
-    padding: 2%;
+    height: 100%;
+    padding: 1%;
     border-radius: 20px;
-    align-content: center; }
+    justify-items: center;
+    margin-top: 1%; }
   .blocTitle__title1 {
     padding: 2%;
     padding-left: 6%;
-    color: #a0a1ac; }
+    color: #a0a1ac;
+    justify-content: center; }
+    @media (min-width: 800px) and (max-width: 1440px) {
+      .blocTitle__title1 {
+        padding-left: 2%; } }
 
 .blocTitle2 {
   width: 100%;
-  margin-bottom: 8%; }
+  margin-bottom: 5%; }
   .blocTitle2__para1 {
     font-size: 1.8rem;
     font-weight: 700; }
+    @media (min-width: 800px) and (max-width: 1440px) {
+      .blocTitle2__para1 {
+        font-size: 1.6em; } }
   .blocTitle2__para2 {
     margin-top: 3%;
     font-weight: 500;
@@ -137,16 +195,26 @@ input[type=checkbox]:checked ~ .close {
   .blocbtn button {
     background: #ff5c5c;
     border: none;
-    width: 35%;
-    padding: 3% 0;
+    width: 40%;
+    padding: 0 3%;
     border-radius: 6px;
     color: white;
     font-size: .7rem; }
+    @media (min-width: 800px) and (max-width: 1440px) {
+      .blocbtn button {
+        width: 25%;
+        font-size: .6em;
+        font-weight: 400; } }
   .blocbtn h6 {
     color: #a0a1ac;
     letter-spacing: 2px;
     margin-left: 3%;
     padding: 2%; }
+    @media (min-width: 800px) and (max-width: 1440px) {
+      .blocbtn h6 {
+        margin-left: 1%;
+        letter-spacing: 3px;
+        margin-left: 1%; } }
 
 footer {
   margin-bottom: 10%; }
