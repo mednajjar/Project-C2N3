@@ -145,7 +145,7 @@ input[type=checkbox]:checked ~ .close {
   font-family: "Barlow";
   width: 100%;
   margin-top: 115%;
-  font-size: 1.2rem;
+  font-size: 5vw;
   padding-left: 5%; }
   @media (min-width: 800px) and (max-width: 2500px) {
     .content {
@@ -178,11 +178,11 @@ input[type=checkbox]:checked ~ .close {
   width: 100%;
   margin-bottom: 5%; }
   .blocTitle2__para1 {
-    font-size: 1.8rem;
+    font-size: 8vw;
     font-weight: 700; }
     @media (min-width: 800px) and (max-width: 2500px) {
       .blocTitle2__para1 {
-        font-size: 1.6em; } }
+        font-size: 3.5vw; } }
   .blocTitle2__para2 {
     margin-top: 3%;
     font-weight: 500;
@@ -196,14 +196,13 @@ input[type=checkbox]:checked ~ .close {
     background: #ff5c5c;
     border: none;
     width: 40%;
-    padding: 0 3%;
+    padding: 1% 2%;
     border-radius: 6px;
     color: white;
     font-size: .7rem; }
     @media (min-width: 800px) and (max-width: 2500px) {
       .blocbtn button {
-        width: 25%;
-        font-size: .6em;
+        width: 20%;
         font-weight: 400; } }
   .blocbtn h6 {
     color: #a0a1ac;
