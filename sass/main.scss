@@ -120,7 +120,7 @@ input[type=checkbox] {
     position: absolute;
     z-index: 1111;
     width: 100%;
-    margin: 4% auto;
+    margin: 10% auto;
 
 
 
@@ -136,8 +136,9 @@ ul {
     width: 90%;
     height: 29vh;
     margin: auto;
-    margin-top: 1%;
+    margin-top: 10%;
     background: $white;
+    padding-top: 3%;
 
     box-shadow: 0px 3px 16px -3px rgba(0, 0, 0, 0.75);
 
@@ -255,10 +256,10 @@ input[type=checkbox]:checked~.menuDesktop {
 }
 
 .content {
-    font-family: 'Barlow', ;
+    font-family: 'Barlow', sans-serif;
     width: 100%;
-    margin-top: 115%;
-    font-size: 1.5em;
+    margin-top: 118%;
+    font-size: 1em;
     padding-left: 5%;
 
 
@@ -280,14 +281,15 @@ input[type=checkbox]:checked~.menuDesktop {
 .blocTitle {
     display: inline-flex;
     width: 100%;
-    letter-spacing: 3px;
+    letter-spacing: 4px;
+    margin-bottom: 3%;
 
 
     &__back {
         background: black;
         color: $white;
         height: 100%;
-        padding: 1%;
+        padding: 2% 2%;
         border-radius: 20px;
         justify-items: center;
         margin-top: 1%;
@@ -302,6 +304,7 @@ input[type=checkbox]:checked~.menuDesktop {
         color: $GrayishBlue;
         justify-content: center;
 
+
         @include mobile() {
             padding-left: 2%;
         }
@@ -312,15 +315,15 @@ input[type=checkbox]:checked~.menuDesktop {
 
 .blocTitle2 {
     width: 100%;
-    margin-bottom: 5%;
+    margin-bottom: 6%;
 
     &__para1 {
-        font-size: 8vw;
-        font-weight: 400;
+        font-size: 1.7em;
+        font-weight: 700;
 
         @include mobile() {
             font-size: 2em;
-            font-weight: 400;
+            font-weight: 700;
         }
 
 
@@ -342,10 +345,11 @@ input[type=checkbox]:checked~.menuDesktop {
         background: $Red;
         border: none;
         width: 40%;
-        padding: 1% 2%;
+        padding: 3% 2%;
         border-radius: 6px;
         color: $white;
         font-size: .7rem;
+        font-weight: 700;
 
         @include mobile() {
             width: 19%;
@@ -363,6 +367,7 @@ input[type=checkbox]:checked~.menuDesktop {
         letter-spacing: 2px;
         margin-left: 3%;
         padding: 2%;
+        font-weight: 400;
 
         @include mobile() {
             letter-spacing: 3px;
