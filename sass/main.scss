@@ -3,14 +3,26 @@
     padding: 0;
 }
 
-@mixin mobile {
-    @media (min-width: 800px) and (max-width:2500px) {
+@mixin desktop {
+    @media (min-width: 900px) and (max-width:2500px) {
+        @content;
+    }
+}
+
+@mixin tablette-pro {
+    @media (min-width: 601px) and (max-width: 899px) {
         @content;
     }
 }
 
 @mixin tablette {
-    @media (min-width: 399px) and (max-width: 799px) {
+    @media (min-width: 426px) and (max-width: 600px) {
+        @content;
+    }
+}
+
+@mixin mobile-mini {
+    @media (min-width: 290px) and (max-width: 355px) {
         @content;
     }
 }
@@ -48,11 +60,11 @@ body {
     list-style: none;
 
 
-    @include mobile() {
-
+    @include desktop() {
         display: block;
-
         display: inline-flex;
+        margin: 0;
+        padding: 1% 0;
 
 
 
@@ -104,7 +116,7 @@ input[type=checkbox] {
     float: right;
     margin: 1% 5%;
 
-    @include mobile() {
+    @include desktop() {
         display: none;
     }
 }
@@ -142,7 +154,7 @@ ul {
 
     box-shadow: 0px 3px 16px -3px rgba(0, 0, 0, 0.75);
 
-    @include mobile() {
+    @include desktop() {
         display: none;
         background: none;
         box-shadow: none;
@@ -193,11 +205,17 @@ input[type=checkbox]:checked~.menuDesktop {
     z-index: -1111;
     border-radius: 0px 0px 0px 60px;
 
-    @include mobile() {
+    @include desktop() {
         height: 62%;
     }
 
+    @include tablette-pro() {
+        height: 50%;
+    }
 
+    @include mobile-mini() {
+        height: 50%;
+    }
 
 
 
@@ -210,6 +228,11 @@ input[type=checkbox]:checked~.menuDesktop {
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: end;
+
+    @include desktop() {
+        margin-top: -4%;
+        padding-top: 5%;
+    }
 
 
 }
@@ -224,11 +247,14 @@ input[type=checkbox]:checked~.menuDesktop {
     overflow: hidden;
     margin-top: 35%;
 
-    @include mobile() {
-        width: 50%;
+    @include desktop() {
+        width: 45%;
         margin-top: 19%;
     }
 
+    @include tablette-pro() {
+        width: 45%;
+    }
 
 
 
@@ -262,18 +288,33 @@ input[type=checkbox]:checked~.menuDesktop {
     font-size: 1em;
     padding-left: 5%;
 
-
-    @include mobile() {
+    & h6 {
         width: 100%;
-        font-size: 1.5em;
-        margin-top: 19%;
+    }
+
+
+
+
+
+    @include desktop() {
+        width: 50vw;
+        font-size: 1.9vw;
+        margin-top: 20%;
 
 
 
     }
 
+    @include tablette-pro() {
+        width: 50%;
+        margin-top: 35%;
+        font-size: .8em;
+    }
 
-
+    @include tablette() {
+        width: 100%;
+        margin-top: 105%;
+    }
 
 
 }
@@ -283,6 +324,7 @@ input[type=checkbox]:checked~.menuDesktop {
     width: 100%;
     letter-spacing: 4px;
     margin-bottom: 3%;
+    align-content: center;
 
 
     &__back {
@@ -291,8 +333,8 @@ input[type=checkbox]:checked~.menuDesktop {
         height: 100%;
         padding: 2% 2%;
         border-radius: 20px;
-        justify-items: center;
-        margin-top: 1%;
+        text-align: center;
+        // margin-top: 1%;
 
 
 
@@ -305,7 +347,7 @@ input[type=checkbox]:checked~.menuDesktop {
         justify-content: center;
 
 
-        @include mobile() {
+        @include desktop() {
             padding-left: 2%;
         }
 
@@ -321,7 +363,7 @@ input[type=checkbox]:checked~.menuDesktop {
         font-size: 1.7em;
         font-weight: 700;
 
-        @include mobile() {
+        @include desktop() {
             font-size: 2em;
             font-weight: 700;
         }
@@ -344,19 +386,25 @@ input[type=checkbox]:checked~.menuDesktop {
     & button {
         background: $Red;
         border: none;
-        width: 40%;
-        padding: 3% 2%;
+        width: 80vw;
+        height: auto;
+        justify-content: center;
+        padding: 4% 3%;
         border-radius: 6px;
         color: $white;
         font-size: .7rem;
         font-weight: 700;
 
-        @include mobile() {
-            width: 19%;
+        @include desktop() {
+            width: 30vw;
             font-size: .7em;
             font-weight: 400;
             padding: 0;
             padding: 0;
+        }
+
+        @include tablette-pro() {
+            width: 50vw;
         }
 
 
@@ -369,7 +417,7 @@ input[type=checkbox]:checked~.menuDesktop {
         padding: 2%;
         font-weight: 400;
 
-        @include mobile() {
+        @include desktop() {
             letter-spacing: 3px;
             margin-left: 1%;
         }
