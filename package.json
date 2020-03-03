@@ -6,7 +6,8 @@
   "scripts": {
     "compile": "node-sass sass/main.scss css/style.css",
     "watch": "node-sass sass/main.scss css/style.css -w",
-    "compressed": "node-sass sass/main.scss css/style.css -w --output-style=compressed"
+    "compressed": "node-sass sass/main.scss css/style.css -w --output-style=compressed",
+    "prefix": "postcss --use autoprefixer sass/main.scss -o css/style.css"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,8 @@
   },
   "homepage": "https://github.com/mednajjar/Project-C2N3#readme",
   "devDependencies": {
-    "node-sass": "^4.13.1"
+    "autoprefixer": "^9.7.4",
+    "node-sass": "^4.13.1",
+    "postcss-cli": "^7.1.0"
   }
 }

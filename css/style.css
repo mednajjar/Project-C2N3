@@ -76,6 +76,9 @@ ul {
   background: white;
   padding-top: 3%;
   box-shadow: 0px 3px 16px -3px rgba(0, 0, 0, 0.75); }
+  @media (min-width: 290px) and (max-width: 355px) {
+    ul {
+      padding-bottom: 2.5%; } }
   @media (min-width: 900px) and (max-width: 2500px) {
     ul {
       display: none;
