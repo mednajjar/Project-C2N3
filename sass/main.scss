@@ -398,6 +398,11 @@ input[type=checkbox]:checked~.menuDesktop {
         color: $white;
         font-size: .7rem;
         font-weight: 700;
+        cursor: pointer;
+
+        & :hover {
+            background: rgb(248, 85, 85);
+        }
 
         @include desktop() {
             width: 30vw;
