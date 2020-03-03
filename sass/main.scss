@@ -74,12 +74,15 @@ body {
 
     & il {
         padding-right: 4%;
+
     }
 
     & il a {
         text-decoration: none;
         font-weight: 700;
         cursor: pointer;
+        color: black;
+
 
     }
 
@@ -87,13 +90,13 @@ body {
         text-decoration: underline;
     }
 
-    & il .log a {
-        color: $DarkGrayishBlue;
+    & #log a {
+        color: $GrayishBlue;
 
     }
 
     & .cercle {
-        color: $DarkGrayishBlue;
+        color: $GrayishBlue;
 
     }
 
@@ -154,9 +157,6 @@ ul {
 
     box-shadow: 0px 3px 16px -3px rgba(0, 0, 0, 0.75);
 
-    @include mobile-mini() {
-        padding-bottom: 2.5%;
-    }
 
     @include desktop() {
         display: none;
