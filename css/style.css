@@ -19,10 +19,12 @@ body {
   float: right;
   justify-content: flex-end;
   list-style: none; }
-  @media (min-width: 800px) and (max-width: 2500px) {
+  @media (min-width: 900px) and (max-width: 2500px) {
     .menuDesktop {
       display: block;
-      display: inline-flex; } }
+      display: inline-flex;
+      margin: 0;
+      padding: 1% 0; } }
   .menuDesktop il {
     padding-right: 4%; }
   .menuDesktop il a {
@@ -46,7 +48,7 @@ input[type=checkbox] {
 .close {
   float: right;
   margin: 1% 5%; }
-  @media (min-width: 800px) and (max-width: 2500px) {
+  @media (min-width: 900px) and (max-width: 2500px) {
     .burger,
     .close {
       display: none; } }
@@ -59,7 +61,7 @@ input[type=checkbox] {
   position: absolute;
   z-index: 1111;
   width: 100%;
-  margin: 4% auto; }
+  margin: 10% auto; }
 
 ul {
   display: none;
@@ -70,10 +72,11 @@ ul {
   width: 90%;
   height: 29vh;
   margin: auto;
-  margin-top: 1%;
+  margin-top: 10%;
   background: white;
+  padding-top: 3%;
   box-shadow: 0px 3px 16px -3px rgba(0, 0, 0, 0.75); }
-  @media (min-width: 800px) and (max-width: 2500px) {
+  @media (min-width: 900px) and (max-width: 2500px) {
     ul {
       display: none;
       background: none;
@@ -109,9 +112,15 @@ input[type=checkbox]:checked ~ .menuDesktop {
   background: #eef3f6;
   z-index: -1111;
   border-radius: 0px 0px 0px 60px; }
-  @media (min-width: 800px) and (max-width: 2500px) {
+  @media (min-width: 900px) and (max-width: 2500px) {
     .contentImg {
       height: 62%; } }
+  @media (min-width: 601px) and (max-width: 899px) {
+    .contentImg {
+      height: 50%; } }
+  @media (min-width: 290px) and (max-width: 355px) {
+    .contentImg {
+      height: 50%; } }
 
 .container {
   width: 95%;
@@ -119,6 +128,10 @@ input[type=checkbox]:checked ~ .menuDesktop {
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: end; }
+  @media (min-width: 900px) and (max-width: 2500px) {
+    .container {
+      margin-top: -4%;
+      padding-top: 5%; } }
 
 .bloc {
   position: absolute;
@@ -128,10 +141,13 @@ input[type=checkbox]:checked ~ .menuDesktop {
   padding-left: 20px;
   overflow: hidden;
   margin-top: 35%; }
-  @media (min-width: 800px) and (max-width: 2500px) {
+  @media (min-width: 900px) and (max-width: 2500px) {
     .bloc {
-      width: 50%;
+      width: 45%;
       margin-top: 19%; } }
+  @media (min-width: 601px) and (max-width: 899px) {
+    .bloc {
+      width: 45%; } }
   .bloc__Img {
     width: 135%; }
 
@@ -145,48 +161,60 @@ input[type=checkbox]:checked ~ .menuDesktop {
   color: #5b5f71; }
 
 .content {
-  font-family: "Barlow";
+  font-family: 'Barlow', sans-serif;
   width: 100%;
-  margin-top: 115%;
-  font-size: 1.5em;
+  margin-top: 118%;
+  font-size: 1em;
   padding-left: 5%; }
-  @media (min-width: 800px) and (max-width: 2500px) {
+  .content h6 {
+    width: 100%; }
+  @media (min-width: 900px) and (max-width: 2500px) {
+    .content {
+      width: 50vw;
+      font-size: 1.9vw;
+      margin-top: 20%; } }
+  @media (min-width: 601px) and (max-width: 899px) {
+    .content {
+      width: 50%;
+      margin-top: 35%;
+      font-size: .8em; } }
+  @media (min-width: 426px) and (max-width: 600px) {
     .content {
       width: 100%;
-      font-size: 1.5em;
-      margin-top: 19%; } }
+      margin-top: 105%; } }
 
 .blocTitle {
   display: inline-flex;
   width: 100%;
-  letter-spacing: 3px; }
+  letter-spacing: 4px;
+  margin-bottom: 3%;
+  align-content: center; }
   .blocTitle__back {
     background: black;
     color: white;
     height: 100%;
-    padding: 1%;
+    padding: 2% 2%;
     border-radius: 20px;
-    justify-items: center;
-    margin-top: 1%; }
+    text-align: center; }
   .blocTitle__title1 {
     padding: 2%;
     padding-left: 6%;
     color: #a0a1ac;
     justify-content: center; }
-    @media (min-width: 800px) and (max-width: 2500px) {
+    @media (min-width: 900px) and (max-width: 2500px) {
       .blocTitle__title1 {
         padding-left: 2%; } }
 
 .blocTitle2 {
   width: 100%;
-  margin-bottom: 5%; }
+  margin-bottom: 6%; }
   .blocTitle2__para1 {
-    font-size: 8vw;
-    font-weight: 400; }
-    @media (min-width: 800px) and (max-width: 2500px) {
+    font-size: 1.7em;
+    font-weight: 700; }
+    @media (min-width: 900px) and (max-width: 2500px) {
       .blocTitle2__para1 {
         font-size: 2em;
-        font-weight: 400; } }
+        font-weight: 700; } }
   .blocTitle2__para2 {
     margin-top: 3%;
     font-weight: 500;
@@ -199,24 +227,31 @@ input[type=checkbox]:checked ~ .menuDesktop {
   .blocbtn button {
     background: #ff5c5c;
     border: none;
-    width: 40%;
-    padding: 1% 2%;
+    width: 80vw;
+    height: auto;
+    justify-content: center;
+    padding: 4% 3%;
     border-radius: 6px;
     color: white;
-    font-size: .7rem; }
-    @media (min-width: 800px) and (max-width: 2500px) {
+    font-size: .7rem;
+    font-weight: 700; }
+    @media (min-width: 900px) and (max-width: 2500px) {
       .blocbtn button {
-        width: 19%;
+        width: 30vw;
         font-size: .7em;
         font-weight: 400;
         padding: 0;
         padding: 0; } }
+    @media (min-width: 601px) and (max-width: 899px) {
+      .blocbtn button {
+        width: 50vw; } }
   .blocbtn h6 {
     color: #a0a1ac;
     letter-spacing: 2px;
     margin-left: 3%;
-    padding: 2%; }
-    @media (min-width: 800px) and (max-width: 2500px) {
+    padding: 2%;
+    font-weight: 400; }
+    @media (min-width: 900px) and (max-width: 2500px) {
       .blocbtn h6 {
         letter-spacing: 3px;
         margin-left: 1%; } }
