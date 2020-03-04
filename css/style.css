@@ -172,7 +172,7 @@ input[type=checkbox]:checked ~ .menuDesktop {
   @media (min-width: 900px) and (max-width: 2500px) {
     .content {
       width: 50vw;
-      font-size: 1.9vw;
+      font-size: 1.6vw;
       margin-top: 20%; } }
   @media (min-width: 601px) and (max-width: 899px) {
     .content {
@@ -235,10 +235,7 @@ input[type=checkbox]:checked ~ .menuDesktop {
     border-radius: 6px;
     color: white;
     font-size: .7rem;
-    font-weight: 700;
-    cursor: pointer; }
-    .blocbtn button :hover {
-      background: #f85555; }
+    font-weight: 700; }
     @media (min-width: 900px) and (max-width: 2500px) {
       .blocbtn button {
         width: 30vw;
