@@ -22,7 +22,7 @@
   "homepage": "https://github.com/mednajjar/Project-C2N3#readme",
   "devDependencies": {
     "autoprefixer": "^9.7.4",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "postcss-cli": "^7.1.0"
   }
 }
